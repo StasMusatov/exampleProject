@@ -1,0 +1,82 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.8.1"
+    id "org.gradle.test-retry" version "1.2.1"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+compileTestJava.options.encoding = "UTF-8"
+
+dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.19.0'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    runtime group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
+
+    compile group: 'com.codeborne', name: 'pdf-test', version: '1.5.2'
+    testCompile group: 'com.tngtech.java', name: 'junit-dataprovider', version: '1.13.1'
+    testCompile group: 'pl.pragmatists', name: 'JUnitParams', version: '1.1.0'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+    runtime group: 'com.browserup', name: 'browserup-proxy-core', version: '2.0.1'
+
+    compile group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.4'
+    compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.13.2'
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.9'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+    implementation group: 'org.gradle', name: 'test-retry-gradle-plugin', version: '1.2.1'
+    implementation group: 'com.opencsv', name: 'opencsv', version: '5.3'
+}
+
+apply plugin: "io.qameta.allure"
+apply plugin: "org.gradle.test-retry"
+
+allure {
+    version = '2.17.2'
+    autoconfigure = true
+    aspectjweaver = true
+    useTestNG() {
+        version = '2.17.2'
+    }
+    resultsDir = file("${buildDir}/allure-results")
+    reportDir = file("${buildDir}/allure-report")
+}
+
+test {
+    def runSuite = project.hasProperty("suite")
+    useTestNG() {
+        if (runSuite) {
+            def suiteToRun = project.getProperty("suite")
+            suites "src/test/java/tests/testSuites/" + suiteToRun
+        } else {
+        }
+    }
+    retry {
+        maxRetries = 0
+        maxFailures = 50
+        failOnPassedAfterRetry = true
+    }
+}
+task copyConfig(type: Copy) {
+    from "src/test/resources/environment.properties"
+    into "build/allure-results"
+    from "src/test/resources/allure.properties"
+    into "build/allure-results"
+}
+
+test.finalizedBy(copyConfig)
+test.finalizedBy 'allureReport'

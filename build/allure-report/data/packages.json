@@ -1,0 +1,26 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests.firstTest.FirstTest",
+    "children" : [ {
+      "name" : "openDropMain",
+      "uid" : "e6c975ce4ee78f58",
+      "parentUid" : "995e48896d8021a3a9abf3d83d6fad95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1671008799136,
+        "stop" : 1671008804046,
+        "duration" : 4910
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 3,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "tests.firstTest.FirstTest"
+  } ]
+}

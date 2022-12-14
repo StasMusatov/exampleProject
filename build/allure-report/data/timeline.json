@@ -1,0 +1,93 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-1UOM27O7",
+    "children" : [ {
+      "name" : "6392@LAPTOP-1UOM27O7.Test worker(22)",
+      "children" : [ {
+        "name" : "openDropMain",
+        "uid" : "e6c975ce4ee78f58",
+        "parentUid" : "a789b3a4120c24b38f797a1243d21b84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1671008799136,
+          "stop" : 1671008804046,
+          "duration" : 4910
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a789b3a4120c24b38f797a1243d21b84"
+    }, {
+      "name" : "6252@LAPTOP-1UOM27O7.Test worker(22)",
+      "children" : [ {
+        "name" : "openDropMain",
+        "uid" : "7b16ce9f73b224aa",
+        "parentUid" : "57b33ddb1e0d68ec7264e6cd81e34bf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1670349337724,
+          "stop" : 1670349345513,
+          "duration" : 7789
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "57b33ddb1e0d68ec7264e6cd81e34bf7"
+    }, {
+      "name" : "12956@LAPTOP-1UOM27O7.Test worker(22)",
+      "children" : [ {
+        "name" : "openDropMain",
+        "uid" : "778b99b975f875e0",
+        "parentUid" : "e8e4c98c8bdc8c8640c271b716ae1017",
+        "status" : "passed",
+        "time" : {
+          "start" : 1670508685559,
+          "stop" : 1670508690936,
+          "duration" : 5377
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e8e4c98c8bdc8c8640c271b716ae1017"
+    }, {
+      "name" : "9224@LAPTOP-1UOM27O7.Test worker(22)",
+      "children" : [ {
+        "name" : "openDropMain",
+        "uid" : "f801a388abcb6849",
+        "parentUid" : "6b197c7e1f2d0e9bbde1a85bf04ee2c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1670407000649,
+          "stop" : 1670407005765,
+          "duration" : 5116
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6b197c7e1f2d0e9bbde1a85bf04ee2c3"
+    } ],
+    "uid" : "b3ee97cfdfa21681f9cd866b64903231"
+  } ]
+}

@@ -1,0 +1,34 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Main Page",
+    "children" : [ {
+      "name" : "AOpen Main Page",
+      "children" : [ {
+        "name" : "All buttons count in top menu - Administrator",
+        "children" : [ {
+          "name" : "openDropMain",
+          "uid" : "e6c975ce4ee78f58",
+          "parentUid" : "6f3beec255b9fa8973bd7f2c12289b13",
+          "status" : "passed",
+          "time" : {
+            "start" : 1671008799136,
+            "stop" : 1671008804046,
+            "duration" : 4910
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 3,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "6f3beec255b9fa8973bd7f2c12289b13"
+      } ],
+      "uid" : "7f9038f277aa927a66524b0fd819b019"
+    } ],
+    "uid" : "79f1a1b5086897e862723d640242384c"
+  } ]
+}

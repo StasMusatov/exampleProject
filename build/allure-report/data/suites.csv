@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 14 09:06:39 GMT 2022","Wed Dec 14 09:06:44 GMT 2022","4910","Gradle suite","Gradle test","tests.firstTest.FirstTest","tests.firstTest.FirstTest","openDropMain","openDropMain","Check all buttons count in top menu - Administrator"
