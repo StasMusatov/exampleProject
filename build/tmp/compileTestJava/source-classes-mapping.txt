@@ -1,0 +1,10 @@
+tests/testClasses/TestClasses.java
+ tests.testClasses.TestClasses
+data/pageObject/mainPage/MainPage.java
+ data.pageObject.mainPage.MainPage
+tests/firstTest/FirstTest.java
+ tests.firstTest.FirstTest
+data/pageObject/mainPage/MainPageLocators.java
+ data.pageObject.mainPage.MainPageLocators
+tests/TestBase.java
+ tests.TestBase
